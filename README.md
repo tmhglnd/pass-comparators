@@ -1,5 +1,7 @@
 # th.passcomparators
 
+**Please consider to download and donate via http://gumroad.com/tmhglnd**
+
 Max abstractions that pass a value to the output if the condition is true, else the output is blocked.
 
 ## About
