@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+
+<c74object name="equalToPass">
+
+	<digest>
+		Pass input to output if "equal-to" condition is true
+	</digest>
+
+	<description>
+		Compares two values to see if one value is equal to the second. Outputs the input if the condition is true and outputs nothing if the condition is false. An additional argument 1 sets the "pass false" flag, which will output 0 when the condition is false. The object also works with lists of 2 values to perform the comparison and trigger the calculation.
+	</description>
+
+	<!--METADATA-->
+	<metadatalist>
+		<metadata name="author">Timo Hoogland</metadata>
+		<metadata name="tag">thModules</metadata>
+		<metadata name="tag">max</metadata>
+		<metadata name="tag">comperator</metadata>
+		<metadata name="tag">math</metadata>
+		<metadata name="tag">logic</metadata>
+	</metadatalist>
+
+	<!--INLETS-->
+	<!-- <inletlist>
+		<inlet id="0" type="float">
+			<digest></digest>
+		</inlet>
+		<inlet id="1" type="float">
+			<digest></digest>
+		</inlet>
+	</inletlist> -->
+
+	<!--OUTLETS-->
+	<!-- <outletlist>
+		<outlet id="0" type="int/float">
+			<digest></digest>
+			<description></description>
+		</outlet>
+	</outletlist> -->
+
+	<!--ARGUMENTS-->
+	<objarglist>
+		<objarg name="initial-comparison-value" optional="1" type="int/float">
+			<description>
+				Set the initial value, to be compared to a number received in the left inlet. A float argument forces a float comparison.
+			</description>
+		</objarg>
+		<objarg name="pass-false-flag" optional="1" type="float">
+			<description>
+				Setting the pass-false flag to 1 will enable a 0 output when comparison is false.
+			</description>
+		</objarg>
+	</objarglist>
+
+	<!--MESSAGES-->
+	<methodlist>
+		<method name="int">
+			<arglist>
+				<arg name="int" optional="0" type="int" />
+			</arglist>
+			<digest>
+				Function depends on inlet
+			</digest>
+			<description>
+				Left inlet: Set the left operand and trigger the calculation.<br/>
+				Right inlet: Set the right operand to work with integers.
+			</description>
+		</method>
+		<method name="float">
+			<arglist>
+				<arg name="float" optional="0" type="float" />
+			</arglist>
+			<digest>
+				Function depends on inlet
+			</digest>
+			<description>
+				Left inlet: Set the left operand and trigger the calculation.<br/>
+				Right inlet: Set the right operand to work with floats.
+			</description>
+		</method>
+		<method name="list">
+			<arglist>
+				<arg name="float" optional="0" type="float" />
+			</arglist>
+			<digest>
+				Function depends on inlet
+			</digest>
+			<description>
+				Left inlet: A list of 2 integers or floats will set left and right inlet and trigger the calculation. The rest of the list will be truncated.<br/>
+				Right inlet: Set the right operand with the first item of the list.
+			</description>
+		</method>
+		<method name="bang">
+			<arglist>
+				<arg name="bang" optional="0" type="bang" />
+			</arglist>
+			<digest>
+				Trigger the calculation (left inlet)
+			</digest>
+			<description>
+				Trigger the calculation (left inlet)
+			</description>
+		</method>
+	</methodlist>
+
+	<!--ATTRIBUTES-->
+<!--	<attributelist>
+		<attribute name='' get='0' set='1' type='float' size='2' >
+			<digest></digest>
+			<description>
+			</description>
+		</attribute>
+	</attributelist>
+-->
+
+	<!--SEEALSO-->
+	<seealsolist>
+		<!-- <seealso name=""/> -->
+	</seealsolist>
+
+</c74object>
