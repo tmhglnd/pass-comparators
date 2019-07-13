@@ -1,4 +1,4 @@
-# th.passcomparators
+# pass-comparators
 
 **Please consider to download and donate via http://gumroad.com/tmhglnd**
 
@@ -19,5 +19,5 @@ This is a small package containing six useful abstractions build with vanilla ma
 ```
 1. open terminal
 2. navigate to Max searchpath (eg. on MacOS cd ~/Documents/Max\ 8/Library)
-3. $ git clone https://github.com/tmhglnd/th.passcomparators.git
+3. $ git clone https://github.com/tmhglnd/pass-comparators.git
 ```
